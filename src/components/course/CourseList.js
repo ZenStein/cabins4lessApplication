@@ -14,8 +14,11 @@ const CourseList = ({courses})=>{
                     </tr>
                 </thead>
                 <tbody>
-                    {courses.map(course => 
+                    {
+                    courses &&
+                        courses.map(course => 
                         <CourseListRow key={course.id} course={course} />
+                    
                     )}
                 </tbody>
         </table>
@@ -23,7 +26,7 @@ const CourseList = ({courses})=>{
 }
 
 CourseList.propTypes = {
-    courses: React.PropTypes.array.isRequired
+    courses: React.PropTypes.array
 }
 
 export default CourseList

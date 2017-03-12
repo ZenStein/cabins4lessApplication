@@ -4,6 +4,7 @@ import {bindActionCreators} from 'redux'
 import * as courseActions from '../../actions/courseActions'
 import CourseForm from './courseForm'
 import toastr from 'toastr'
+//import base from '../../base'
 
 class ManageCoursePage extends Component {
     constructor(props, context) {
@@ -20,6 +21,17 @@ class ManageCoursePage extends Component {
        this.saveCourse = this.saveCourse.bind(this);
        this.redirect = this.redirect.bind(this);
     }
+    // componentWillMount(){
+    //     console.log('cwm in course page')
+    //     //this runs right before <Inventory> is rendered
+    //     this.ref = base.syncState('courses', {
+    //     context: this,
+    //     state: 'course'
+    //     })  
+    // }    
+    // componentWillUnmount(){
+    //     base.removeBinding(this.ref)  
+    // }    
     componentWillReceiveProps(nextProps){
         if(this.props.course.id != nextProps.course.id){
             //necessary to populate form when existing course is loaded directly
@@ -82,7 +94,7 @@ function getCourseById(courses, id){
 }
 function mapStateToProps(state, ownProps){
     const courseId = ownProps.params.id // from path 'course/:id'
-    let course = {id: '',watchRef:'',title:'',authorId:'',length:'',category:''}
+    let course = {id: '',watchHref:'',title:'',authorId:'',length:'',category:''}
     if(courseId && state.courses.length > 0){
         course = getCourseById(state.courses, courseId)
     }

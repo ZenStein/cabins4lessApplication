@@ -1,11 +1,13 @@
 import webpack from 'webpack';
 import path from 'path';
+import whatwg from 'whatwg-fetch'
 
 export default {
   debug: true,
   devtool: 'inline-source-map',
   noInfo: false,
   entry: [
+    'whatwg-fetch',
     'eventsource-polyfill', // necessary for hot reloading with IE
     'webpack-hot-middleware/client?reload=true', //note that it reloads the page if hot module reloading fails.
     path.resolve(__dirname, 'src/index')
@@ -32,5 +34,10 @@ export default {
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
       {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'}
     ]
-  }
+  },
+    resolve: {
+        alias: {
+            "ag-grid-root" : "../node_modules/ag-grid/"
+        }
+    }  
 };
