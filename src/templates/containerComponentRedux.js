@@ -1,31 +1,30 @@
 import React, { Component, PropTypes } from 'react';
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
-//import * as courseActions from '../../actions/courseActions'
+import toastr from 'toastr'
 
-class ManageCoursePage extends Component {
+class AdminContainer extends Component {
     constructor(props, context) {
         super(props, context);
         
     }
-    
     render() {
         return (
-            <div>
-                
-            </div>
+            <h1>
+                Admin
+            </h1>
         );
     }
 }
 
-ManageCoursePage.propTypes = {
+AdminContainer.propTypes = {
 
 };
 
-function mapStateToProps(){
-
+const mapStateToProps = (state, ownProps)=>{
+   return state
 }
-function mapDispatchToProps(){
-
+const mapDispatchToProps = (dispatch)=>{
+    return {}
 }
-export default connect(mapStateToProps, mapDispatchToProps)(ManageCoursePage)
+export default connect(mapStateToProps, mapDispatchToProps)(AdminContainer)

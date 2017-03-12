@@ -5,6 +5,9 @@ import AboutPage from './components/about/AboutPage'
 import HomePage from './components/home/HomePage'
 import CoursePage from './components/course/CoursePage'
 import ManageCoursePage from './components/course/ManageCoursePage'
+import SmsBlast from './components/sms/SmsBlastContainer'
+import ReservationGrid from './components/reservationGrid/ReservationGrid'
+import AdminContainer from './components/admin/adminContainer'
 
 export default (
     <Route path="/" component={App}>
@@ -13,5 +16,8 @@ export default (
         <Route path="courses" component={CoursePage}/>
         <Route path="course" component={ManageCoursePage}/>
         <Route path="course/:id" component={ManageCoursePage}/>
+        <Route path="sms-blast" component={SmsBlast}/>
+        <Route path="reservation-grid" component={ReservationGrid}/>
+        <Route path="admin" component={AdminContainer}/>
     </Route>
 )

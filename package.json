@@ -9,22 +9,35 @@
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch",
     "test": "mocha --reporter progress tools/testSetup.js \"src/**/*.test.js\"",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "localtunnel": "lt --port 3000"
   },
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
+    "ag-grid": "^8.1.0",
+    "ag-grid-react": "^8.1.0",
     "babel-polyfill": "6.8.0",
+    "body-parser": "^1.16.1",
     "bootstrap": "3.3.6",
+    "firebase": "^3.6.9",
     "jquery": "2.2.3",
+    "localtunnel": "^1.8.2",
+    "re-base": "^2.6.0",
     "react": "15.0.2",
+    "react-bootstrap": "^0.30.7",
+    "react-bootstrap-date-picker": "^4.0.0",
+    "react-data-grid": "^2.0.15",
     "react-dom": "15.0.2",
+    "react-dropzone": "^3.11.0",
     "react-redux": "4.4.5",
     "react-router": "2.4.0",
     "react-router-redux": "4.0.4",
     "redux": "3.5.2",
     "redux-thunk": "2.0.1",
-    "toastr": "2.1.2"
+    "toastr": "2.1.2",
+    "twilio": "^2.11.1",
+    "whatwg-fetch": "^2.0.2"
   },
   "devDependencies": {
     "babel-cli": "6.8.0",

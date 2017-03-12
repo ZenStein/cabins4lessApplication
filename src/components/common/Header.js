@@ -11,6 +11,12 @@ const Header = ({loading}) => {
             <Link to="about" activeClassName="active">About</Link>
             {" | "}
             <Link to="courses" activeClassName="active">Courses</Link>
+            {" | "}
+            <Link to="sms-blast" activeClassName="active">Sms Blast</Link>
+            {" | "}
+            <Link to="reservation-grid" activeClassName="active">Reservation Grid</Link>
+            {" | "}
+            <Link to="admin" activeClassName="active">Admin</Link>                                    
             {loading && <LoadingDots interval={100} dots={20}/>}
         </nav>
     )
