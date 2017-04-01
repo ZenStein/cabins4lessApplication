@@ -14,6 +14,9 @@ import '../node_modules/toastr/build/toastr.min.css'
 import '../node_modules/ag-grid/dist/styles/ag-grid.css'
 import '../node_modules/ag-grid/dist/styles/theme-dark.css'
 
+
+alert('hey man!')
+
 const store = configureStore()
 store.dispatch(loadCourses())
 store.dispatch(loadAuthors())
